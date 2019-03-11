@@ -24,7 +24,7 @@ object Naive3SUM extends App {
       }
       else {
         val count = if (0 == l(i - 1) + l(j - 1) + l(k - 1)) {
-          println(s"Found a matching triple: ${l(i - 1)} ${l(j - 1)} ${l(k - 1)}")
+//          println(s"Found a matching triple: ${l(i - 1)} ${l(j - 1)} ${l(k - 1)}")
           acc + 1
         } else acc
         countHelper(l, i, j, k + 1, count)

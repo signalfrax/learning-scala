@@ -22,12 +22,19 @@ object BenchmarkNaive3SUM extends App {
     def elapsedTime: Double = (System.currentTimeMillis() - start) / 1000.0
   }
 
-  val numbers = generateNumbers(250)
-  val timer = Stopwatch()
-  val count = Naive3SUM.count(numbers)
-  val duration = timer.elapsedTime
+  @tailrec
+  def benchmark(n: Int): Unit = {
+    println("Running...")
+    val numbers = generateNumbers(n)
+    val timer = Stopwatch()
+    val count = Naive3SUM.count(numbers)
+    val duration = timer.elapsedTime
+    println(s"Total numbers ${numbers.length} found $count in $duration")
+    benchmark(n * 2)
+  }
 
-  println(s"Found $count in $duration")
+  benchmark(250)
+
 
 
 }
