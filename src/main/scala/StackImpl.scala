@@ -17,12 +17,12 @@ object StackImpl extends App{
   }
 
   val s = Stack()
-  val s1 = s.push("bogus")
-  val s2 = s1.push("test")
-  val s3 = s2.push("stacker")
+    .push("bogus")
+    .push("test")
+    .push("stacker")
 
 
-  val s3Mod = s3.map( (s:String) => s"$s modified" )
+  val s3Mod = s.map( (s:String) => s"$s modified" )
   s3Mod.foreach(s => println(s))
 
 

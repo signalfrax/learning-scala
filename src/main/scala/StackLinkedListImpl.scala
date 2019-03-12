@@ -27,10 +27,10 @@ object StackLinkedListImpl extends App {
 
 
   val s = Stack[String]()
-  val s1 = s.push("1")
-  val s2 = s1.push("2")
-  val s3 = s2.push("3")
+    .push("1")
+    .push("2")
+    .push("3")
 
-  s3.foreach(s => println(s"Got: $s"))
+  s.foreach(i => println(s"Got: $i"))
 
 }

@@ -74,18 +74,18 @@ object StackUsingRecursiveDataStructure extends App {
   }
 
   val ps = PushdownStack[Int]
-  val ps1 = ps.push(1)
-  val ps2 = ps1.push(2)
-  val ps3 = ps2.push(3)
-  val ps4 = ps3.push(4)
+    .push(1)
+    .push(2)
+    .push(3)
+    .push(4)
 
   // val ps5 = ps4.map( x => x * 2 )
 
   val pa = PushdownStack[Int]
-  val pa1 = pa.push(5)
-  val pa2 = pa1.push(6)
+    .push(5)
+    .push(6)
 
-  val c = ps4 ++ pa2
+  val c = ps ++ pa
 
   //  c.foreach(s => println(s)) // Actually we should have 6,5,4,3,2,1
   val f = c.filter(i => i >= 2 && i <= 5)
